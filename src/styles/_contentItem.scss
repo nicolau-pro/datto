@@ -1,0 +1,85 @@
+li {
+  margin: 10px;
+  width: calc(100% - 40px);
+
+  border: 1px solid $darkGrey;
+  background-color: $darkGrey;
+  margin-top: 10px;
+  height: $height;
+  border-radius: $height/2;
+  overflow: hidden;
+
+  .percBar {
+    height: $height;
+    display: block;
+    position: relative;
+    top: 0;
+    background: linear-gradient(to right, #d40f3a 0%, #e35928 100%);
+    box-shadow: 0px 0px 20px $orange;
+  }
+
+  .fuel,
+  .perc {
+    display: block;
+    position: relative;
+    top: -$height * 0.87;
+    color: $white;
+    height: $height;
+    line-height: $height * 0;
+    font-weight: 600;
+    font-size: $height/2;
+    padding-right: $height/10;
+    text-align: right;
+
+    button {
+      color: $white;
+      background-color: $red;
+      border: $height / 30 solid $white;
+      width: $height * 0.75;
+      height: $height * 0.75;
+      border-radius: 50%;
+      margin-left: $height * 0.2;
+      line-height: 0;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $orange;
+      }
+
+      i {
+        font-size: $height * 0.2 !important;
+      }
+    }
+  }
+
+  a {
+    color: red !important;
+    text-decoration: none;
+  }
+  .fuel {
+    top: -$height * 2;
+    font-weight: 900;
+    text-align: left;
+    width: 75%;
+
+    form {
+      background: none;
+
+      input {
+        text-transform: uppercase;
+        background: none;
+        color: $white;
+        line-height: $height * 0.9;
+        font-weight: 600;
+        font-size: $height/2;
+        padding-left: $height/3;
+        border: none;
+        width: 100%;
+
+        &::placeholder {
+          color: rgba(255, 255, 255, 0.5);
+        }
+      }
+    }
+  }
+}

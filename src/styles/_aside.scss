@@ -1,0 +1,48 @@
+aside {
+  background-color: $darkBlue;
+  color: white;
+  height: 100%;
+  width: 200px;
+  @include linkOnDarkBackground;
+
+  * {
+    font-size: 30 * $fpt !important;
+  }
+
+  a {
+    text-decoration: none !important;
+  }
+
+  ul {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    li {
+      display: block;
+      width: 100%;
+      margin: 0;
+      height: 70 * $pt;
+      border-bottom: 1px dotted lighten($darkBlue, 10%);
+
+      a {
+        display: block;
+        height: 30 * $pt;
+        padding: 20 * $pt;
+
+        &:hover,
+        &:active {
+          background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        i {
+          color: $azure;
+          font-size: 85% !important;
+          margin-right: 12px;
+        }
+      }
+    }
+  }
+}
