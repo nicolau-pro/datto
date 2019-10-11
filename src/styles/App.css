@@ -153,7 +153,7 @@ main .content ul li .percBar {
   background: -webkit-gradient(linear, left top, right top, from(#d40f3a), to(#e35928));
   background: linear-gradient(to right, #d40f3a 0%, #e35928 100%);
   -webkit-box-shadow: 0px 0px 20px #e25827;
-          box-shadow: 0px 0px 20px #e25827;
+  box-shadow: 0px 0px 20px #e25827;
 }
 
 main .content ul li .fuel,
@@ -256,7 +256,7 @@ main .content ul li .fuel form input::placeholder {
     background: -webkit-gradient(linear, left top, right top, from(#d40f3a), to(#e35928));
     background: linear-gradient(to right, #d40f3a 0%, #e35928 100%);
     -webkit-box-shadow: 0px 0px 20px #e25827;
-            box-shadow: 0px 0px 20px #e25827;
+    box-shadow: 0px 0px 20px #e25827;
   }
   main .content ul li .fuel,
   main .content ul li .perc {
