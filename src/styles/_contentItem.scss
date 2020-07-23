@@ -107,7 +107,9 @@ li {
           outline: none;
 
           &.other {
-            opacity: 1;
+            font-style: initial;
+            font-weight: unset;
+            opacity: initial;
           }
         }
       }

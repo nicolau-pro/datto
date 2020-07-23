@@ -274,7 +274,9 @@ main .content ul li .fuel form input:focus {
 }
 
 main .content ul li .fuel form input:focus.other {
-  opacity: 1;
+  font-style: initial;
+  font-weight: unset;
+  opacity: initial;
 }
 
 @media screen and (max-width: 768px) {
@@ -381,6 +383,8 @@ main .content ul li .fuel form input:focus.other {
     outline: none;
   }
   main .content ul li .fuel form input:focus.other {
-    opacity: 1;
+    font-style: initial;
+    font-weight: unset;
+    opacity: initial;
   }
 }
