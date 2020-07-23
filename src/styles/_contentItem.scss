@@ -92,6 +92,12 @@ li {
         text-transform: uppercase;
         width: 100%;
 
+        &.other {
+          font-style: italic;
+          font-weight: 100;
+          opacity: 60 * $percent;
+        }
+
         &::placeholder {
           color: transparentize($white, 50 * $percent);
         }
@@ -99,6 +105,10 @@ li {
         &:focus {
           background: linear-gradient(to right, $color-primary 10%, transparent 100%);
           outline: none;
+
+          &.other {
+            opacity: 1;
+          }
         }
       }
     }

@@ -37,7 +37,14 @@ class Item extends Component {
             <label id={'form_' + index} htmlFor={'input_' + index}>
               {fuel}
             </label>
-            <input type='text' id={'input_' + index} placeholder='Resource type' onChange={this.handleChange} value={fuel} />
+            <input
+              type='text'
+              id={'input_' + index}
+              placeholder='Resource type'
+              onChange={this.handleChange}
+              value={fuel}
+              className={fuel.toLowerCase() === 'other' ? 'other' : undefined}
+            />
           </form>
         </span>
       </li>
