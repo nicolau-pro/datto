@@ -1,43 +1,8 @@
+@import 'variables';
 @import 'colors';
 @import 'mixins';
-
-* {
-  color: $color-light;
-  font-family: 'PT Sans', sans-serif;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-}
-
-$percent: 1 / 100;
-$px: 1px;
-
-$pt: $px * 75 * $percent;
-$fpt: $pt * 80 * $percent;
-$break-small: 576 * $px;
-$break-medium: 768 * $px;
-$break-large: 992 * $px;
-$break-xl: 1200 * $px;
+@import 'reset';
 
 @import 'header';
 @import 'footer';
-
-main {
-  background: linear-gradient(
-      135deg,
-      transparentize($color-secondary, 0) 20%,
-      transparentize(darken($color-secondary, 8), 8 * $percent) 60%,
-      transparentize(darken($color-secondary, 16), 16 * $percent) 100%
-    ),
-    url(https://www.datto.com/grid-assets/img/what-is-datto.2eaf7cf3.svg);
-
-  background-color: $color-secondary;
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  height: calc(100vh - 120px);
-  @import 'aside';
-  @import 'content';
-}
+@import 'main';

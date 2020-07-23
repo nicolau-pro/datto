@@ -1,0 +1,9 @@
+$percent: 1 / 100;
+$px: 1px;
+
+$pt: $px * 75 * $percent;
+$fpt: $pt * 80 * $percent;
+$break-small: 576 * $px;
+$break-medium: 768 * $px;
+$break-large: 992 * $px;
+$break-xl: 1200 * $px;
