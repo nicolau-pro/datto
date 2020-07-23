@@ -1,108 +1,104 @@
 li {
+  background-color: transparentize($color-dark, 90 * $percent);
+  border: 1px solid $color-accent;
+  border-radius: $height / 2;
+  height: $height;
   margin: 10px;
+  margin-top: 10px;
+  overflow: hidden;
   width: calc(100% - 40px);
 
-  border: 1px solid $darkGrey;
-  background-color: $darkGrey;
-  margin-top: 10px;
-  height: $height;
-  border-radius: $height/2;
-  overflow: hidden;
-
-  .percBar {
-    height: $height;
+  .perc-bar {
+    background: linear-gradient(to top, $color-accent 10%, lighten($color-accent, 5) 100%);
+    box-shadow: 0 0 20 * $px $color-accent;
     display: block;
+    height: $height;
     position: relative;
     top: 0;
-    background: -webkit-gradient(
-      linear,
-      left top,
-      right top,
-      from(#d40f3a),
-      to(#e35928)
-    );
-    background: -o-linear-gradient(left, #d40f3a 0%, #e35928 100%);
-    background: linear-gradient(to right, #d40f3a 0%, #e35928 100%);
-    -webkit-box-shadow: 0px 0px 20px $orange;
-    box-shadow: 0px 0px 20px $orange;
   }
 
   .fuel,
   .perc {
-    display: block;
-    position: relative;
-    top: -$height * 0.87;
     color: $white;
+    display: block;
+    font-size: $height / 2;
+    font-weight: 100;
     height: $height;
-    line-height: $height * 0;
-    font-weight: 600;
-    font-size: $height/2;
-    padding-right: $height/10;
+    line-height: 0;
+    padding-right: $height / 10;
+    position: relative;
     text-align: right;
+    top: -$height * 87 * $percent;
 
     button {
-      color: $white;
-      background-color: $red;
-      border: $height / 30 solid $white;
-      width: $height * 0.75;
-      height: $height * 0.75;
+      background-color: transparentize($color-accent, 90 * $percent);
+      border: $height / 30 solid $color-accent;
       border-radius: 50%;
-      margin-left: $height * 0.2;
-      line-height: 0;
+      color: $color-accent;
       cursor: pointer;
+      height: $height * 75 * $percent;
+      line-height: 0;
+      margin-left: $height * 20 * $percent;
+      outline: none;
+      width: $height * 75 * $percent;
 
       &:hover {
-        background-color: $orange;
+        background-color: $color-primary-dark;
+        border-color: $color-light;
+        border-radius: 50%;
+        box-shadow: 0 0 20px $color-primary;
+        color: $color-light;
       }
 
       i {
-        font-size: $height * 0.2 !important;
+        color: inherit;
+        font-size: $height * 20 * $percent;
+        pointer-events: none;
+      }
+
+      span {
+        font-size: 0;
+        opacity: 0;
       }
     }
   }
 
   a {
-    color: red !important;
+    color: $teal;
     text-decoration: none;
   }
+
   .fuel {
-    top: -$height * 2;
     font-weight: 900;
     text-align: left;
+    top: -$height * 2;
     width: 75%;
 
     form {
       background: none;
 
+      label {
+        display: none;
+      }
+
       input {
-        text-transform: uppercase;
         background: none;
+        border: 0;
         color: $white;
-        line-height: $height * 0.9;
+        font-size: $height / 2;
         font-weight: 600;
-        font-size: $height/2;
-        padding-left: $height/3;
-        border: none;
+        line-height: $height;
+        padding-left: $height / 3;
+        text-transform: uppercase;
         width: 100%;
 
-        &::-webkit-input-placeholder {
-          color: rgba(255, 255, 255, 0.5);
-        }
-
-        &::-moz-placeholder {
-          color: rgba(255, 255, 255, 0.5);
-        }
-
-        &:-ms-input-placeholder {
-          color: rgba(255, 255, 255, 0.5);
-        }
-
-        &::-ms-input-placeholder {
-          color: rgba(255, 255, 255, 0.5);
-        }
-
         &::placeholder {
-          color: rgba(255, 255, 255, 0.5);
+          color: transparentize($white, 50 * $percent);
+        }
+
+        &:focus {
+          background: linear-gradient(to right, $color-primary 10%, transparent 100%);
+          outline: none;
         }
       }
     }

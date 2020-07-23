@@ -1,0 +1,7 @@
+{
+  "items": [
+    { "text": "Home", "icon": "home", "link": "/" },
+    { "text": "Main website", "icon": "external-link", "link": "https://www.datto.com/", "target_blank": true },
+    { "text": "Datto RMM", "icon": "computer", "link": "https://www.datto.com/business-management/datto-rmm", "target_blank": true }
+  ]
+}

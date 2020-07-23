@@ -1,41 +1,27 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 // This section would use router to navigate within the react app
 
 class Aside extends Component {
   render() {
     return (
-      <React.Fragment>
-        <aside>
-          <nav>
-            <ul>
-              <li>
-                <a href="/">
-                  <i className="im im-home"></i>Home
-                </a>
-              </li>
-              <li>
+      <aside>
+        <nav>
+          <ul>
+            {this.props.data.map((item, index) => (
+              <li key={index}>
                 <a
-                  href="https://www.datto.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i className="im im-external-link"></i>Main website
+                  href={item.link}
+                  target={item.target_blank ? '_blank' : undefined}
+                  rel={item.target_blank ? 'noopener noreferrer' : undefined}>
+                  <i className={'im im-' + item.icon}></i>
+                  {item.text}
                 </a>
               </li>
-              <li>
-                <a
-                  href="https://www.datto.com/business-management/datto-rmm"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i className="im im-computer"></i>Datto RMM
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </aside>
-      </React.Fragment>
+            ))}
+          </ul>
+        </nav>
+      </aside>
     );
   }
 }

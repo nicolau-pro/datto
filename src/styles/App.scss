@@ -1,5 +1,9 @@
+@import 'colors';
+@import 'mixins';
+
 * {
-  font-family: "PT Sans", sans-serif;
+  color: $color-light;
+  font-family: 'PT Sans', sans-serif;
 }
 
 body {
@@ -7,24 +11,24 @@ body {
   padding: 0;
 }
 
-@import "colors";
-@import "mixins";
+$percent: 1 / 100;
+$px: 1px;
 
-$pt: 0.75px;
-$fpt: $pt * 0.8;
-$breakSmall: 576px;
-$breakMedium: 768px;
-$breakLarge: 992px;
-$breakXLarge: 1200px;
+$pt: $px * 75 * $percent;
+$fpt: $pt * 80 * $percent;
+$break-small: 576 * $px;
+$break-medium: 768 * $px;
+$break-large: 992 * $px;
+$break-xl: 1200 * $px;
 
-@import "header";
-@import "footer";
+@import 'header';
+@import 'footer';
 
 main {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  background: linear-gradient(135deg, $color-secondary 0%, darken($color-secondary, 15) 100%);
+  background-color: $color-secondary;
   display: flex;
   height: calc(100vh - 120px);
-  @import "aside";
-  @import "content";
+  @import 'aside';
+  @import 'content';
 }

@@ -1,5 +1,6 @@
 * {
-  font-family: "PT Sans", sans-serif;
+  color: #fff;
+  font-family: 'PT Sans', sans-serif;
 }
 
 body {
@@ -8,16 +9,16 @@ body {
 }
 
 header {
+  background: linear-gradient(135deg, #e25827 0%, #d40f3a 100%);
   display: block;
-  padding: 10px;
-  background: linear-gradient(135deg, #00e4db 0%, #1560c3 100%);
   height: 80px;
+  padding: 10px;
 }
 
 header .logo {
   height: 50px;
-  margin-top: 10px;
   margin-left: 10px;
+  margin-top: 10px;
 }
 
 @media screen and (max-width: 768px) {
@@ -35,14 +36,13 @@ header .logo {
 }
 
 footer {
+  background-color: #002a3a;
+  bottom: 0;
+  color: #fff;
   font-size: 12px;
-  background-color: #00e4db;
-  background: linear-gradient(135deg, #00e4db 0%, #1560c3 100%);
   padding: 9px;
   position: fixed;
-  bottom: 0;
   width: 100%;
-  color: #ffffff;
 }
 
 footer a {
@@ -51,26 +51,35 @@ footer a {
 }
 
 footer a:hover, footer a:active {
-  color: #000000;
+  color: #000;
   text-decoration: underline;
 }
 
+footer a {
+  color: #c2c4c5;
+}
+
+footer a:hover, footer a:active {
+  color: #fff;
+}
+
 main {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  background: linear-gradient(135deg, #4e6973 0%, #2f3f45 100%);
+  background-color: #4e6973;
   display: flex;
   height: calc(100vh - 120px);
 }
 
 main aside {
-  background-color: #002a3a;
-  color: white;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, transparent 60%);
+  background-color: unset;
+  color: #fff;
   height: 100%;
   width: 200px;
 }
 
 main aside a {
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -79,129 +88,151 @@ main aside a:hover, main aside a:active {
   text-decoration: underline;
 }
 
-main aside * {
-  font-size: 18px !important;
-}
-
-main aside a {
-  text-decoration: none !important;
-}
-
 main aside ul {
-  list-style-type: none;
   display: inline-block;
+  list-style-type: none;
   margin: 0;
   padding: 0;
   width: 100%;
 }
 
 main aside ul li {
-  display: block;
-  width: 100%;
-  margin: 0;
-  height: 52.5px;
   border-bottom: 1px dotted #004f6d;
+  display: block;
+  height: 52.5px;
+  margin: 0;
+  width: 100%;
 }
 
 main aside ul li a {
   display: block;
+  font-size: 18px;
   height: 22.5px;
-  padding: 15px;
-}
-
-main aside ul li a:hover, main aside ul li a:active {
-  background-color: rgba(255, 255, 255, 0.2);
+  padding: 11.25px 0 18.75px 15px;
 }
 
 main aside ul li a i {
-  color: #00e4db;
-  font-size: 85% !important;
+  color: rgba(255, 255, 255, 0.6);
   margin-right: 12px;
 }
 
+main aside ul li a i::before {
+  font-size: 70%;
+}
+
+main aside ul li a:hover, main aside ul li a:active {
+  background-color: rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+}
+
+main aside ul li a:hover i, main aside ul li a:active i {
+  color: #00e4db;
+}
+
 main .content {
-  background: white;
-  width: calc(100vw - 200px) !important;
   overflow-x: hidden;
   overflow-y: scroll;
+  width: calc(100vw - 200px);
+}
+
+main .content h1 {
+  font-size: 200%;
+  font-weight: 100;
+  margin: 10px 0 -10px 20px;
+  padding: 20px 0;
+}
+
+main .content h1 span {
+  opacity: 0.5;
 }
 
 main .content ul {
-  list-style-type: none;
   display: inline-block;
+  list-style-type: none;
   margin: 0;
   padding: 10px;
   width: 100%;
 }
 
 main .content ul li {
-  margin: 10px;
-  width: calc(100% - 40px);
-  border: 1px solid #3b4757;
-  background-color: #3b4757;
-  margin-top: 10px;
-  height: 60px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid #199ed9;
   border-radius: 30px;
+  height: 60px;
+  margin: 10px;
+  margin-top: 10px;
   overflow: hidden;
+  width: calc(100% - 40px);
 }
 
-main .content ul li .percBar {
-  height: 60px;
+main .content ul li .perc-bar {
+  background: linear-gradient(to top, #199ed9 10%, #26abe6 100%);
+  box-shadow: 0 0 20px #199ed9;
   display: block;
+  height: 60px;
   position: relative;
   top: 0;
-  background: -webkit-gradient(linear, left top, right top, from(#d40f3a), to(#e35928));
-  background: linear-gradient(to right, #d40f3a 0%, #e35928 100%);
-  -webkit-box-shadow: 0px 0px 20px #e25827;
-  box-shadow: 0px 0px 20px #e25827;
 }
 
 main .content ul li .fuel,
 main .content ul li .perc {
+  color: #fff;
   display: block;
-  position: relative;
-  top: -52.2px;
-  color: #ffffff;
-  height: 60px;
-  line-height: 0px;
-  font-weight: 600;
   font-size: 30px;
+  font-weight: 100;
+  height: 60px;
+  line-height: 0;
   padding-right: 6px;
+  position: relative;
   text-align: right;
+  top: -52.2px;
 }
 
 main .content ul li .fuel button,
 main .content ul li .perc button {
-  color: #ffffff;
-  background-color: #d40f3a;
-  border: 2px solid #ffffff;
-  width: 45px;
-  height: 45px;
+  background-color: rgba(25, 158, 217, 0.1);
+  border: 2px solid #199ed9;
   border-radius: 50%;
-  margin-left: 12px;
-  line-height: 0;
+  color: #199ed9;
   cursor: pointer;
+  height: 45px;
+  line-height: 0;
+  margin-left: 12px;
+  outline: none;
+  width: 45px;
 }
 
 main .content ul li .fuel button:hover,
 main .content ul li .perc button:hover {
-  background-color: #e25827;
+  background-color: #d40f3a;
+  border-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #e25827;
+  color: #fff;
 }
 
 main .content ul li .fuel button i,
 main .content ul li .perc button i {
-  font-size: 12px !important;
+  color: inherit;
+  font-size: 12px;
+  pointer-events: none;
+}
+
+main .content ul li .fuel button span,
+main .content ul li .perc button span {
+  font-size: 0;
+  opacity: 0;
 }
 
 main .content ul li a {
-  color: red !important;
+  color: #199ed9;
   text-decoration: none;
 }
 
 main .content ul li .fuel {
-  top: -120px;
   font-weight: 900;
   text-align: left;
+  top: -120px;
   width: 75%;
 }
 
@@ -209,123 +240,127 @@ main .content ul li .fuel form {
   background: none;
 }
 
+main .content ul li .fuel form label {
+  display: none;
+}
+
 main .content ul li .fuel form input {
-  text-transform: uppercase;
   background: none;
-  color: #ffffff;
-  line-height: 54px;
-  font-weight: 600;
+  border: 0;
+  color: #fff;
   font-size: 30px;
+  font-weight: 600;
+  line-height: 60px;
   padding-left: 20px;
-  border: none;
+  text-transform: uppercase;
   width: 100%;
-}
-
-main .content ul li .fuel form input::-webkit-input-placeholder {
-  color: rgba(255, 255, 255, 0.5);
-}
-
-main .content ul li .fuel form input:-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.5);
-}
-
-main .content ul li .fuel form input::-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.5);
 }
 
 main .content ul li .fuel form input::placeholder {
   color: rgba(255, 255, 255, 0.5);
 }
 
+main .content ul li .fuel form input:focus {
+  background: linear-gradient(to right, #e25827 10%, transparent 100%);
+  outline: none;
+}
+
 @media screen and (max-width: 768px) {
   main .content ul li {
-    margin: 10px;
-    width: calc(100% - 40px);
-    border: 1px solid #3b4757;
-    background-color: #3b4757;
-    margin-top: 10px;
-    height: 30px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 1px solid #199ed9;
     border-radius: 15px;
-    overflow: hidden;
-  }
-  main .content ul li .percBar {
     height: 30px;
+    margin: 10px;
+    margin-top: 10px;
+    overflow: hidden;
+    width: calc(100% - 40px);
+  }
+  main .content ul li .perc-bar {
+    background: linear-gradient(to top, #199ed9 10%, #26abe6 100%);
+    box-shadow: 0 0 20px #199ed9;
     display: block;
+    height: 30px;
     position: relative;
     top: 0;
-    background: -webkit-gradient(linear, left top, right top, from(#d40f3a), to(#e35928));
-    background: linear-gradient(to right, #d40f3a 0%, #e35928 100%);
-    -webkit-box-shadow: 0px 0px 20px #e25827;
-    box-shadow: 0px 0px 20px #e25827;
   }
   main .content ul li .fuel,
   main .content ul li .perc {
+    color: #fff;
     display: block;
-    position: relative;
-    top: -26.1px;
-    color: #ffffff;
-    height: 30px;
-    line-height: 0px;
-    font-weight: 600;
     font-size: 15px;
+    font-weight: 100;
+    height: 30px;
+    line-height: 0;
     padding-right: 3px;
+    position: relative;
     text-align: right;
+    top: -26.1px;
   }
   main .content ul li .fuel button,
   main .content ul li .perc button {
-    color: #ffffff;
-    background-color: #d40f3a;
-    border: 1px solid #ffffff;
-    width: 22.5px;
-    height: 22.5px;
+    background-color: rgba(25, 158, 217, 0.1);
+    border: 1px solid #199ed9;
     border-radius: 50%;
-    margin-left: 6px;
-    line-height: 0;
+    color: #199ed9;
     cursor: pointer;
+    height: 22.5px;
+    line-height: 0;
+    margin-left: 6px;
+    outline: none;
+    width: 22.5px;
   }
   main .content ul li .fuel button:hover,
   main .content ul li .perc button:hover {
-    background-color: #e25827;
+    background-color: #d40f3a;
+    border-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #e25827;
+    color: #fff;
   }
   main .content ul li .fuel button i,
   main .content ul li .perc button i {
-    font-size: 6px !important;
+    color: inherit;
+    font-size: 6px;
+    pointer-events: none;
+  }
+  main .content ul li .fuel button span,
+  main .content ul li .perc button span {
+    font-size: 0;
+    opacity: 0;
   }
   main .content ul li a {
-    color: red !important;
+    color: #199ed9;
     text-decoration: none;
   }
   main .content ul li .fuel {
-    top: -60px;
     font-weight: 900;
     text-align: left;
+    top: -60px;
     width: 75%;
   }
   main .content ul li .fuel form {
     background: none;
   }
+  main .content ul li .fuel form label {
+    display: none;
+  }
   main .content ul li .fuel form input {
-    text-transform: uppercase;
     background: none;
-    color: #ffffff;
-    line-height: 27px;
-    font-weight: 600;
+    border: 0;
+    color: #fff;
     font-size: 15px;
+    font-weight: 600;
+    line-height: 30px;
     padding-left: 10px;
-    border: none;
+    text-transform: uppercase;
     width: 100%;
-  }
-  main .content ul li .fuel form input::-webkit-input-placeholder {
-    color: rgba(255, 255, 255, 0.5);
-  }
-  main .content ul li .fuel form input:-ms-input-placeholder {
-    color: rgba(255, 255, 255, 0.5);
-  }
-  main .content ul li .fuel form input::-ms-input-placeholder {
-    color: rgba(255, 255, 255, 0.5);
   }
   main .content ul li .fuel form input::placeholder {
     color: rgba(255, 255, 255, 0.5);
   }
+  main .content ul li .fuel form input:focus {
+    background: linear-gradient(to right, #e25827 10%, transparent 100%);
+    outline: none;
+  }
 }
-/*# sourceMappingURL=App.css.map */

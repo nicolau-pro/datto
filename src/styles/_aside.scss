@@ -1,46 +1,49 @@
 aside {
-  background-color: $darkBlue;
-  color: white;
+  @include link-on-dark-background;
+
+  background: linear-gradient(180deg, transparentize($color-light, 85 * $percent) 0%, transparent 60%);
+  background-color: unset;
+  color: $white;
   height: 100%;
   width: 200px;
-  @include linkOnDarkBackground;
-
-  * {
-    font-size: 30 * $fpt !important;
-  }
-
-  a {
-    text-decoration: none !important;
-  }
 
   ul {
-    list-style-type: none;
     display: inline-block;
+    list-style-type: none;
     margin: 0;
     padding: 0;
     width: 100%;
 
     li {
+      border-bottom: 1px dotted lighten($color-secondary-dark, 10%);
       display: block;
-      width: 100%;
-      margin: 0;
       height: 70 * $pt;
-      border-bottom: 1px dotted lighten($darkBlue, 10%);
+      margin: 0;
+      width: 100%;
 
       a {
         display: block;
+        font-size: 30 * $fpt;
         height: 30 * $pt;
-        padding: 20 * $pt;
+        padding: 15 * $pt 0 25 * $pt 20 * $pt;
+
+        i {
+          color: transparentize($color-light, 40 * $percent);
+          margin-right: 12px;
+
+          &::before {
+            font-size: 70%;
+          }
+        }
 
         &:hover,
         &:active {
-          background-color: rgba(255, 255, 255, 0.2);
-        }
+          background-color: transparentize($color-dark, 50 * $percent);
+          text-decoration: none;
 
-        i {
-          color: $azure;
-          font-size: 85% !important;
-          margin-right: 12px;
+          i {
+            color: $color-accent-light;
+          }
         }
       }
     }

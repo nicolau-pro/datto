@@ -1,17 +1,29 @@
-$black: #000000;
-
-$darkGrey: #3b4757;
-
+// Basic color definitions:
+$black: #000;
+$dark-grey: #3b4757;
 $grey: #74777a;
-
-$darkBlue: #002a3a;
-
-$lightBlue: #1560c3;
-
+$dark-blue: #002a3a;
+$blue: #4e6973;
+$light-blue: #1560c3;
+$teal: #199ed9;
 $azure: #00e4db;
-
 $orange: #e25827;
-
 $red: #d40f3a;
+$white: #fff;
 
-$white: #ffffff;
+// Build colors:
+$color-primary: $orange;
+$color-primary-dark: $red;
+
+$color-secondary: $blue;
+$color-secondary-dark: $dark-blue;
+
+$color-accent-light: $azure;
+$color-accent: $teal;
+$color-accent-dark: $light-blue;
+
+$color-light: $white;
+$color-neutral: $grey;
+$color-neutral-light: lighten($color-neutral, 30);
+$color-neutral-dark: $dark-grey;
+$color-dark: $black;
