@@ -64,8 +64,10 @@ footer a:hover, footer a:active {
 }
 
 main {
-  background: linear-gradient(135deg, #4e6973 0%, #2f3f45 100%);
+  background: linear-gradient(135deg, #4e6973 20%, rgba(62, 83, 91, 0.92) 60%, rgba(45, 61, 66, 0.84) 100%), url(https://www.datto.com/grid-assets/img/what-is-datto.2eaf7cf3.svg);
   background-color: #4e6973;
+  background-position: center;
+  background-size: cover;
   display: flex;
   height: calc(100vh - 120px);
 }
